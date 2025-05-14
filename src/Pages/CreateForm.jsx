@@ -34,9 +34,9 @@ const CreateForm = ({ isAuth }) => {
   return (
     <div className='createPostPage'>
       <form className="cpContainer" onSubmit={createPost}>
-        <h1>Create New Post</h1>
+         <h1 className="text-[white] text-[5vh]">Create New Post</h1>
         <div className="inputGp">
-          <label htmlFor="">Title:</label>
+          <label htmlFor="" className="text-[white]">Title:</label>
           <input
             required
             type="text"
@@ -45,7 +45,7 @@ const CreateForm = ({ isAuth }) => {
           />
         </div>
         <div className="inputGp">
-          <label htmlFor="">Post:</label>
+           <label htmlFor="" className="text-[white]">Post:</label>
           <textarea
             name=""
             required
