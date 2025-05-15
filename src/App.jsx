@@ -20,13 +20,27 @@ const App = () => {
 
   const [isAuth, setIsAuth] = useState(localStorage.getItem('isAuth'));
 
+  const logout = () => {
+    if (window.confirm("Are you sure you want to sign out?")) {
+        signOut(auth).then(() => {
+          localStorage.removeItem('isAuth');
+          toast.success('You have successfully signed out');
+          setIsAuth(false);
+          navigate('/');
+        }).catch((error) => {
+          console.log(error.message)
+      })
+    }
+}
+
+
 
 
 
   return (
     <div>
        <ToastContainer position='top-right' theme="colored" />
-        <Navbar/>
+        <Navbar isAuth={isAuth} logout={logout}/>
 
      <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />} />

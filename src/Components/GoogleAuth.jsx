@@ -5,12 +5,6 @@ import { signInWithPopup } from 'firebase/auth';
 import { provider, auth } from '../Firebase-config';
 
 
-
-
-
-
-
-
 const GoogleAuth = ({setIsAuth}) => {
 
    let navigate = useNavigate();
