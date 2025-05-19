@@ -10,6 +10,7 @@ import { signOut } from "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import CreateForm from './Pages/CreateForm';
+import EditPost from './Pages/EditPost';
 
 
 
@@ -48,6 +49,7 @@ const App = () => {
         <Route path='/login' element={< Login setIsAuth={setIsAuth} />}/>
         <Route path="/reset" element={<ResetPassword />} />
         <Route path='/create-post' element={<CreateForm isAuth={isAuth} />} />
+        <Route path='/edit-post/:id' element={<EditPost isAuth={isAuth} />} />
 
      </Routes>
 
